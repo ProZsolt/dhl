@@ -1,0 +1,183 @@
+{
+  "shipments": [
+    {
+      "id": "11111111111111111XXXXXXX",
+      "service": "ecommerce",
+      "origin": {
+        "address": {
+          "countryCode": "US",
+          "postalCode": "55426",
+          "addressLocality": "ST LOUIS PARK"
+        }
+      },
+      "destination": {
+        "address": {
+          "countryCode": "GB",
+          "postalCode": "SE4 1XF",
+          "addressLocality": "LONDON"
+        }
+      },
+      "status": {
+        "timestamp": "2020-04-20T12:12:00+06:00",
+        "location": {
+          "address": {
+            "countryCode": "GB",
+            "postalCode": "AL10 9RT",
+            "addressLocality": "AL10 9RT, GB"
+          }
+        },
+        "statusCode": "transit",
+        "status": "PROCESSED AT LOCAL DISTRIBUTION CENTER"
+      },
+      "details": {
+        "product": {
+          "productName": "DHL Parcel Intl Direct"
+        },
+        "weight": {
+          "value": 0.555,
+          "unitText": "lbs"
+        },
+        "references": [
+          {
+            "number": "11111111111111111XXXXXXX",
+            "type": "customer-confirmation-number"
+          },
+          {
+            "number": "2222222222222222",
+            "type": "ecommerce-number"
+          },
+          {
+            "number": "JJD3333333333333333",
+            "type": "local-tracking-number"
+          }
+        ]
+      },
+      "events": [
+        {
+          "timestamp": "2020-04-20T12:12:00+06:00",
+          "location": {
+            "address": {
+              "countryCode": "GB",
+              "postalCode": "AL10 9RT",
+              "addressLocality": "AL10 9RT, GB"
+            }
+          },
+          "statusCode": "transit",
+          "status": "PROCESSED AT LOCAL DISTRIBUTION CENTER"
+        },
+        {
+          "timestamp": "2020-04-19T14:14:00+06:00",
+          "location": {
+            "address": {
+              "countryCode": "UK",
+              "postalCode": "HEATHROW",
+              "addressLocality": "HEATHROW, GB"
+            }
+          },
+          "statusCode": "transit",
+          "status": "CLEARED CUSTOMS"
+        },
+        {
+          "timestamp": "2020-04-19T13:01:00+06:00",
+          "location": {
+            "address": {
+              "countryCode": "UK",
+              "postalCode": "HEATHROW",
+              "addressLocality": "HEATHROW, GB"
+            }
+          },
+          "statusCode": "transit",
+          "status": "ARRIVED AT CUSTOMS"
+        },
+        {
+          "timestamp": "2020-04-15T15:57:09-05:00",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "60160",
+              "addressLocality": "Melrose Park, IL, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "PROCESSING COMPLETED AT ORIGIN"
+        },
+        {
+          "timestamp": "2020-04-15T15:57:09-05:00",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "60160",
+              "addressLocality": "Melrose Park, IL, US"
+            }
+          },
+          "statusCode": "unknown",
+          "status": "SCANNED INTO SACK/CONTAINER"
+        },
+        {
+          "timestamp": "2020-04-15T15:56:59-05:00",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "60160",
+              "addressLocality": "Melrose Park, IL, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "MANIFESTED FOR OUTBOUND TRANSPORTATION"
+        },
+        {
+          "timestamp": "2020-04-15T13:43:45-05:00",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "60160",
+              "addressLocality": "Melrose Park, IL, US"
+            }
+          },
+          "statusCode": "unknown",
+          "status": "CLOSE BAG"
+        },
+        {
+          "timestamp": "2020-04-14T12:11:54-05:00",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "60160",
+              "addressLocality": "Melrose Park, IL, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "Processed"
+        },
+        {
+          "timestamp": "2020-04-14T09:56:00-05:00",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "60160",
+              "addressLocality": "Melrose Park, IL, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "PACKAGE RECEIVED AT DHL ECOMMERCE DISTRIBUTION CENTER"
+        },
+        {
+          "timestamp": "2020-04-13T12:01:18",
+          "statusCode": "pre-transit",
+          "status": "EN ROUTE TO DHL ECOMMERCE"
+        },
+        {
+          "timestamp": "2020-04-13T11:58:56",
+          "statusCode": "pre-transit",
+          "status": "Electronic Notification Received: Your order has been processed and tracking will be updated soon"
+        }
+      ]
+    }
+  ],
+  "possibleAdditionalShipmentsUrl": [
+    "/track/shipments?trackingNumber=11111111111111111XXXXXXX&service=dgf",
+    "/track/shipments?trackingNumber=11111111111111111XXXXXXX&service=freight",
+    "/track/shipments?trackingNumber=11111111111111111XXXXXXX&service=parcel-nl",
+    "/track/shipments?trackingNumber=11111111111111111XXXXXXX&service=parcel-pl"
+  ]
+}
