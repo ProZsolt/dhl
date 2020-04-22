@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 	"testing"
+	"time"
 )
 
 type RoundTripFunc func(req *http.Request) *http.Response
@@ -41,10 +42,16 @@ func TestShipments(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Unexpected error: %v", err)
 	}
-	got := ans.Shipments[0].Status.Status
-	want := "PROCESSED AT LOCAL DISTRIBUTION CENTER"
-	if got != want {
-		t.Fatalf("Got: %v; Want: %v", got, want)
+	gotStatus := ans.Shipments[0].Status.Status
+	wantStatus := "PROCESSED AT LOCAL DISTRIBUTION CENTER"
+	if gotStatus != wantStatus {
+		t.Errorf("Got: %v; Want: %v", gotStatus, wantStatus)
+	}
+
+	gotTime := ans.Shipments[0].Status.Timestamp
+	wantTime := time.Date(2020, 4, 20, 12, 12, 00, 0, time.FixedZone("UTC+6", +6*60*60))
+	if !gotTime.Equal(wantTime) {
+		t.Errorf("Got: %v; Want: %v", gotTime, wantTime)
 	}
 }
 

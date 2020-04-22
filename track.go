@@ -12,7 +12,7 @@ import (
 type ProofOfDelivery struct {
 	Timestamp   time.Time
 	DocumentURL string
-	signed      Person
+	Signed      Person
 }
 
 // Shipment information including full shipment details and complete list of shipment events.
@@ -58,8 +58,8 @@ type ShipmentDetails struct {
 
 // ShipmentEvent is an event in shipment delivery; also known as Milestone, Checkpoint, Status History Entry or http://schema.org/DeliveryEvent
 type ShipmentEvent struct {
-	timestamp   time.Time
-	location    Place
+	Timestamp   time.Time
+	Location    Place
 	StatusCode  string // enum: pre-transit, transit, delivered, failure, unknown
 	Status      string
 	Description string
